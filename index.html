@@ -36,6 +36,26 @@
       };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <!-- reload page on main nav item click -->
+     <script>
+      document.addEventListener(
+      "click",
+      function (e) {
+        const link = e.target.closest(".sidebar-nav a");
+        if (!link) return;
+
+        const href = link.getAttribute("href");
+
+        if (href === location.hash) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          location.reload();
+        }
+      },
+      true
+    );
+</script>
     <!-- plugins -->
     <script src="https://unpkg.com/@h-hg/docsify-image-caption/dist/docsify-image-caption.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-interactive-checkboxes/dist/plugin.min.js"></script>
