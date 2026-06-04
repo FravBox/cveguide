@@ -10,7 +10,7 @@
       .sidebar-nav ul { display: block !important; }
 
       /* bold h1 items in sidebar TOC */
-      .sidebar-nav > ul > li.active > ul > li > a {
+      .sidebar-nav a.is-h1 {
         font-weight: bold;
       }
 
@@ -84,6 +84,27 @@
 </script>
 <!-- load docsify -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+
+<!-- bold sidebar TOC links that correspond to h1s -->
+<script>
+  window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook) {
+    hook.doneEach(function() {
+      document.querySelectorAll('.sidebar-nav .is-h1').forEach(function(el) {
+        el.classList.remove('is-h1');
+      });
+
+      const pagePath = window.location.hash.split('?')[0];
+
+      document.querySelectorAll('.markdown-section h1').forEach(function(h1) {
+        if (!h1.id) return;
+        const link = document.querySelector(
+          '.sidebar-nav a[href="' + pagePath + '?id=' + h1.id + '"]'
+        );
+        if (link) link.classList.add('is-h1');
+      });
+    });
+  });
+</script>
 
 <!-- plugins -->
     <script src="https://unpkg.com/@h-hg/docsify-image-caption/dist/docsify-image-caption.min.js"></script>
