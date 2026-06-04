@@ -8,29 +8,20 @@
   </head>
   <body>
     <div id="docute"></div>
+
+    <!-- Sidebar config lives in sidebar.js — edit that file to change nav -->
+    <script src="sidebar.js"></script>
+
     <script src="https://unpkg.com/docute@4/dist/docute.js"></script>
     <script>
       new Docute({
         target: '#docute',
 
-        // Default dark theme with a toggle button in the header
+        // Default dark theme with a light/dark toggle in the header
         theme: 'dark',
         darkThemeToggler: true,
 
-        sidebar: [
-          {
-            title: 'Contents',
-            // collapsable: true is the default — gives each section the expand/collapse arrow
-            toc: true, // automatically adds header links as sub-items for the active page
-            children: [
-              { title: 'Welcome',                  link: '/'          },
-              { title: 'Community considerations', link: '/community' },
-              { title: 'Tools & Subscriptions',    link: '/tools'     },
-              { title: 'Technicals',               link: '/tech'      },
-              { title: 'Schedule & To Do Lists',   link: '/schedule'  },
-            ]
-          }
-        ],
+        sidebar: window.SIDEBAR,
       })
     </script>
   </body>
