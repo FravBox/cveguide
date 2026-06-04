@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Docs</title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" />
+    <style>
+      .sidebar-nav ul { display: block !important; }
+    </style>
   </head>
   <body>
     <div id="app">Please wait...</div>
@@ -38,17 +41,19 @@
 
 <!-- prevent active TOC items from collapsing -->
 <script>
+  window.$docsify = window.$docsify || {};
   (function () {
-    const _removeAttribute = Element.prototype.removeAttribute;
-    Element.prototype.removeAttribute = function (name) {
-      if (name === 'open' && this.tagName === 'UL' && this.closest && this.closest('.sidebar-nav')) {
-        return; // block collapse
-      }
-      return _removeAttribute.call(this, name);
+    const _doneEach = window.$docsify.doneEach;
+    window.$docsify.doneEach = function (hook, vm) {
+      if (_doneEach) _doneEach(hook, vm);
+      hook.doneEach(function () {
+        document.querySelectorAll('.sidebar-nav ul').forEach(function (ul) {
+          ul.setAttribute('open', '');
+        });
+      });
     };
   })();
 </script>
-
 <!-- load docsify -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
