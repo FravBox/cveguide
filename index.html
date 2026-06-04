@@ -82,6 +82,30 @@
     });
   });
 </script>
+
+<!-- Only move the sidebar if the active menu item isn't visible -->
+<script>
+  (function() {
+    const _scrollIntoView = Element.prototype.scrollIntoView;
+    Element.prototype.scrollIntoView = function(arg) {
+      if (this.closest && this.closest('.sidebar-nav')) {
+        const sidebar = document.querySelector('.sidebar');
+        if (!sidebar) return;
+        const itemTop = this.offsetTop;
+        const itemBottom = itemTop + this.offsetHeight;
+        const viewTop = sidebar.scrollTop;
+        const viewBottom = viewTop + sidebar.clientHeight;
+        
+        if (itemTop < viewTop || itemBottom > viewBottom) {
+          _scrollIntoView.call(this, arg);
+        }
+        return;
+      }
+      _scrollIntoView.call(this, arg);
+    };
+  })();
+</script>
+
 <!-- load docsify -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
