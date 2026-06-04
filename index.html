@@ -91,12 +91,10 @@
       if (this.closest && this.closest('.sidebar-nav')) {
         const sidebar = document.querySelector('.sidebar');
         if (!sidebar) return;
-        const itemTop = this.offsetTop;
-        const itemBottom = itemTop + this.offsetHeight;
-        const viewTop = sidebar.scrollTop;
-        const viewBottom = viewTop + sidebar.clientHeight;
-        
-        if (itemTop < viewTop || itemBottom > viewBottom) {
+        const itemRect = this.getBoundingClientRect();
+        const sidebarRect = sidebar.getBoundingClientRect();
+        const isVisible = itemRect.top >= sidebarRect.top && itemRect.bottom <= sidebarRect.bottom;
+        if (!isVisible) {
           _scrollIntoView.call(this, arg);
         }
         return;
