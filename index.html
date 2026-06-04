@@ -10,16 +10,19 @@
       .sidebar-nav ul { display: block !important; }
 
       /* bold h1 items in sidebar TOC */
-      .sidebar-nav > ul > li > ul > li > a {
+      .sidebar-nav > ul > li.active > ul > li > a {
         font-weight: bold;
       }
 
-      /* bold text (**) is white */
       .markdown-section strong {
-        color: #ffffff;
+        color: inherit;
+        font-size: larger;
       }
 
-      /* inline code and code blocks inherit surrounding text color */
+      .markdown-section em {
+        color: inherit;
+      }
+
       .markdown-section code {
         color: inherit;
       }
@@ -69,6 +72,15 @@
       });
     };
   })();
+</script>
+
+<!-- -# renders as smaller text -->
+<script>
+  window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook) {
+    hook.beforeEach(function(content) {
+      return content.replace(/^-# (.+)$/gm, '<small class="subtitle">$1</small>');
+    });
+  });
 </script>
 <!-- load docsify -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
