@@ -6,7 +6,23 @@
     <title>Docs</title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" />
     <style>
+      /* prevent sidebar TOC from collapsing */
       .sidebar-nav ul { display: block !important; }
+
+      /* bold h1 items in sidebar TOC */
+      .sidebar-nav > ul > li > ul > li > a {
+        font-weight: bold;
+      }
+
+      /* bold text (**) is white */
+      .markdown-section strong {
+        color: #ffffff;
+      }
+
+      /* inline code and code blocks inherit surrounding text color */
+      .markdown-section code {
+        color: inherit;
+      }
     </style>
   </head>
   <body>
