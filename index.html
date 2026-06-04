@@ -36,39 +36,26 @@
       };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-    <!-- prevent active TOC items from collapsing -->
-     <script>
-  window.$docsify = window.$docsify || {};
-  const _mounted = window.$docsify.mounted;
-  window.$docsify.mounted = function(hook) {
-    if (_mounted) _mounted(hook);
-    hook.doneEach(function() {
-      const sidebar = document.querySelector('.sidebar-nav');
-      if (!sidebar) return;
 
-      sidebar.addEventListener('click', function(e) {
-        const link = e.target.closest('a');
-        if (!link) return;
+<!-- prevent active TOC items from collapsing -->
+<script>
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('.sidebar-nav a');
+    if (!link) return;
 
-        // Find the <li> that owns this link
-        const li = link.closest('li');
-        if (!li) return;
+    const li = link.closest('li');
+    if (!li) return;
 
-        // If this li has a nested <ul> (i.e. it's a collapsible parent),
-        // and it's already active — prevent the toggle
-        const hasChildren = li.querySelector(':scope > ul');
-        const isActive = li.classList.contains('active') ||
-                         link.classList.contains('active');
+    const hasChildren = li.querySelector(':scope > ul');
+    const isActive = li.classList.contains('active') || link.classList.contains('active');
 
-        if (hasChildren && isActive) {
-          e.stopPropagation();
-          // Still allow the href to fire so the page scrolls / reloads
-        }
-      }, true); // capture phase so we beat Docsify's listener
-    });
-  };
+    if (hasChildren && isActive) {
+      e.stopImmediatePropagation();
+    }
+  }, true);
 </script>
-    <!-- plugins -->
+
+<!-- plugins -->
     <script src="https://unpkg.com/@h-hg/docsify-image-caption/dist/docsify-image-caption.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-interactive-checkboxes/dist/plugin.min.js"></script>
     <script src="https://unpkg.com/docsify-copy-code"></script>
