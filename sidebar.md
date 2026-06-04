@@ -1,0 +1,5 @@
+* [Welcome](/)
+* [Community considerations](community.md)
+* [Tools & Subscriptions](tools.md)
+* [Technicals](tech.md)
+* [Schedule & To Do Lists](schedule.md)
