@@ -1,28 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Docs</title>
-    <link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" />
   </head>
   <body>
-    <div id="docute"></div>
-
-    <!-- Sidebar config lives in sidebar.js — edit that file to change nav -->
-    <script src="sidebar.js"></script>
-
-    <script src="https://unpkg.com/docute@4/dist/docute.js"></script>
+    <div id="app">Please wait...</div>
     <script>
-      new Docute({
-        target: '#docute',
-
-        // Default dark theme with a light/dark toggle in the header
-        theme: 'dark',
-        darkThemeToggler: true,
-
-        sidebar: window.SIDEBAR,
-      })
+      window.$docsify = {
+        name: "Docs",
+        relativePath: true,
+        loadSidebar: true,
+        subMaxLevel: 3,
+        alias: {
+          "/.*/_sidebar.md": "/_sidebar.md",
+        },
+        sidebarDisplayLevel: 1,
+        // docsify-copy-code
+        copyCode: {
+          buttonText: "⧉",
+          errorText: "Error",
+          successText: "Copied",
+        },
+        // for search
+        search: {
+          maxAge: 86400000, // Expiration time, the default one day
+          paths: "auto",
+          placeholder: "Text search",
+        },
+        noData: "No Results",
+        depth: 6,
+        hideOtherSidebarContent: false,
+      };
     </script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <!-- plugins -->
+    <script src="https://unpkg.com/@h-hg/docsify-image-caption/dist/docsify-image-caption.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-interactive-checkboxes/dist/plugin.min.js"></script>
+    <script src="https://unpkg.com/docsify-copy-code"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   </body>
 </html>
