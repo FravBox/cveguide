@@ -1,0 +1,183 @@
+# ==============================================================
+# robots.txt — All crawlers, bots, AI/LLM scrapers DISALLOWED
+# ==============================================================
+
+# --- Block all generic bots ---
+User-agent: *
+Disallow: /
+
+# --- AI / LLM training crawlers ---
+
+# OpenAI
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+# Anthropic
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+# Google AI
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: Googlebot-News
+Disallow: /
+
+User-agent: Googlebot-Video
+Disallow: /
+
+# Meta / Facebook
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Meta-ExternalFetcher
+Disallow: /
+
+# Apple
+User-agent: Applebot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+# Microsoft / Bing
+User-agent: Bingbot
+Disallow: /
+
+User-agent: msnbot
+Disallow: /
+
+User-agent: BingPreview
+Disallow: /
+
+# Amazon / Alexa
+User-agent: Amazonbot
+Disallow: /
+
+# Cohere
+User-agent: cohere-ai
+Disallow: /
+
+# Common Crawl (used for many AI training datasets)
+User-agent: CCBot
+Disallow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Disallow: /
+
+# You.com
+User-agent: YouBot
+Disallow: /
+
+# Diffbot
+User-agent: Diffbot
+Disallow: /
+
+# Bytedance / TikTok
+User-agent: Bytespider
+Disallow: /
+
+# Semrush
+User-agent: SemrushBot
+Disallow: /
+
+# Ahrefs
+User-agent: AhrefsBot
+Disallow: /
+
+# Majestic
+User-agent: MJ12bot
+Disallow: /
+
+# Screaming Frog
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Disallow: /
+
+# Baidu
+User-agent: Baiduspider
+Disallow: /
+
+# Yandex
+User-agent: YandexBot
+Disallow: /
+
+# Archive.org / Wayback Machine
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+# Omgili / Webz.io
+User-agent: omgili
+Disallow: /
+
+# Neevabot
+User-agent: Neevabot
+Disallow: /
+
+# iaskspider (iask.ai)
+User-agent: iaskspider
+Disallow: /
+
+# Magpie-Crawler (Brandwatch)
+User-agent: Magpie-Crawler
+Disallow: /
+
+# DataForSeoBot
+User-agent: DataForSeoBot
+Disallow: /
+
+# ImagesiftBot
+User-agent: ImagesiftBot
+Disallow: /
+
+# PetalBot (Huawei)
+User-agent: PetalBot
+Disallow: /
+
+# Timpibot
+User-agent: Timpibot
+Disallow: /
+
+# Webzio-Extended
+User-agent: Webzio-Extended
+Disallow: /
+
+# Kangaroo Bot
+User-agent: kangaroo.alpha
+Disallow: /
+
+# Scrapy
+User-agent: Scrapy
+Disallow: /
+
+# ==============================================================
+# No sitemap is intentionally disclosed.
+# ==============================================================

@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /docs/
+
+# Don't rewrite files or directories
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite everything to index.html
+
+RewriteRule . index.html [L]
