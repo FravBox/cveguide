@@ -477,6 +477,14 @@ As an example, the following script takes 2 cells (A2 & D2), combines them with 
 =ARRAYFORMULA(IF(Everything!A2:A="","",HYPERLINK(GETURLS("D2:D"),Everything!A2:A&" - "&Everything!D2:D)))
 ```
 
-# Etc
+# Discohook 
 
-I feel like I'm forgetting something?
+Discohook is a webpage and a discord bot that can be found in [tools](tools.md#discohook-bot-website).     
+It makes fancy messages using discord webhooks. You can [find guides here.](https://discohook.app/guide)
+
+## Using the website
+
+Website should be fairly intuitive but TODO cv2 messages.
+
+## Buttons that do things require the bot - TODO
+

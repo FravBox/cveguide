@@ -1,16 +1,6 @@
 # Tools & Services
 
-For the purposes of this document, we're assuming that your event is the following:
-
-- Entrants submit videos
-- The videos are blinded (participants don't know who made which videos)
-- All or most videos want comments of some kind
-- The entrants will be doing the commenting
-- There is a contest/awards component
-- The entrants will be voting/judging for those awards
-- The event is based in a discord server
-
-**This page only lists the tools. View how to use them on the [Technicals](tech.md) page.**
+This page only lists the tools. View how to use them on the [Technicals](tech.md) page.
 
 ## Absolutely necessary
 
@@ -91,11 +81,13 @@ Any time I need something a little custom, I write it using YAGPDB custom comman
 
 All of those uses are custom so in theory you could use any bot with a custom command system or create your own bot for these uses.
 
+*Note: I don't have any custom commands here. You will have to learn how to do this yourself. Use [help.yagpdb.xyz](https://help.yagpdb.xyz) for the docs or [learn.yagpdb.xyz](https://learn.yagpdb.xyz) for their learning course, which is quite comprehensive!*
+
 ### Discohook (bot + website)
 
-[Discohook.app](https://discohook.app) [(Github repo)](https://github.com/discohook/discohook) and its companion [discord bot](https://github.com/discohook/discohook/tree/main/packages/bot) are free and open-source tools that help you make discord messages without coding anything.
+[Discohook.app](https://discohook.app) [(Github repo)](https://github.com/discohook/discohook) and its companion [discord bot](https://github.com/discohook/discohook/tree/main/packages/bot) are free and open-source tools that help you make discord messages without coding anything. 
 
-The website is a WYSIWYG editor for embeds and components v2 messages. It will allow you to post through a webhook, make fancy-looking messages, and create buttons that do simple tasks.
+The website is a WYSIWYG editor for embeds and components v2 messages. It will allow you to post through a webhook, make fancy-looking messages, and create buttons that do simple tasks. You can [find guides here.](https://discohook.app/guide)
 
 In most cases, the bot is not required. You can do almost everything through the website. However, the bot will make some things more convenient.
 
@@ -107,6 +99,12 @@ I use personally use both, as discohook is slightly more convenient for some typ
 - Posting through a webhook
 - Creating messages with simple button functions
 - Convenient message maintenance (on messages previously posted by Discohook)
+
+**What is only possible through the bot:**     
+- Creating buttons that do things other than open links
+- Right clicking a message, selecting `Apps -> Discohook` and using any of the functions to quickly edit that message, its components, or send it back to the website (this is the "makes things more convenient" factor)
+
+If you don't need either of those things, you can get by using only the website.
 
 ### An event bot - Sesh (for mini-events)
 
@@ -127,7 +125,47 @@ This is more beneficial than Sesh for smaller communities.
 
 Also note: YAGPDB has a [built-in events system](https://help.yagpdb.xyz/docs/core/all-commands/#events-) you can try if you want to limit your bot use, but it is extremely limited.
 
+
+## Physical awards
+
+### Award Certificates (cards)
+
+RICE Awards are 5x7 cards "giant size custom playing cards" printed at https://makeplayingcards.com. [Direct link to product](https://www.makeplayingcards.com/design/giant-size-custom-playing-cards.html).
+
+This format was chosen specifically because this size counts as letter mail, can be sent from home with a simple postal stamp in the USA, is not usually folded when delivered, and will avoid customs and tariffs worldwide.
+
+**Card sleeves / protectors**     
+If you want to protect the cards during transit, they should be sleeved. I use both a soft sleeve and a hard sleeve.
+
+Soft: "BCW 5x7 photo sleeves" or "5x7 soft sleeves."     
+Hard: "5x7 toploader" can sometimes be found as "clear rigid photo protectors."
+
+**Envelopes**     
+For mailing only the card itself (and possibly card + soft sleeve), you can use an A7 size envelope.     
+If you are mailing card + hard protective sleeve, you will need an A9 size envelope.
+
+**Mailing costs**    
+One card + protectors is about 1.5 ounces. You can go to the (US) post office and pay exactly, or buy forever stamps (which cover the first ounce) and "additional ounce" stamps. This is technically overpaying, but I like the convenience.
+
+There are also 2 and 3 ounce stamps, however the heaviest weight a first class letter mail can have is 3.5 ounces. If someone wins more than 2 awards, I ship them in separate envelopes to remain classified as letter mail.
+
+### Stickers
+
+I design all my stickers for the year, save each image individually, and then try to fit all of them on the minimum amount of die cut sticker pages using https://stickeryou.com. [Direct link to product.](https://www.stickeryou.com/products/die-cut-sticker-pages/750)
+
+I have not yet found an alternative that is both more affordable and not politically active...
+
 ## Other tools
+
+### Data-driven graphics in Photoshop
+
+You can create an image template with components that are replaceable and control the image with an excel spreadsheet. This automates the process of making several different awards, title cards, etc.
+
+[How data-driven graphics works](https://helpx.adobe.com/photoshop/using/creating-data-driven-graphics.html)
+
+Notably, [Photopea](https://www.photopea.com/), a free online Photoshop equivalent, also supports data driven graphics! You can use the same guide linked above.
+
+Different online tools exist for this like Canva, but I have no experience with them.
 
 ### Spreadsheets
 
