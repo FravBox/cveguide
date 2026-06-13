@@ -39,6 +39,7 @@ Here are some services I have found that have a serviceable free tier:
 - [PollUnit](https://pollunit.com/en/tutorials/advanced_poll_settings) (40 responses)
 - [StrawPoll](https://strawpoll.com)
 - [Tally.so](https://tally.so/)
+- [VoteGenerator](https://votegenerator.com/) (3 polls / 100 responses)
 - [Lark suite](https://www.larksuite.com/en_us/product/forms) (Google workspace alternative)
 - [Zoho forms](https://www.zoho.com/forms/) (500 submissions - google workspace alternative)
 - [Survey Monkey](https://www.surveymonkey.com) (10 questions / 25 responses)

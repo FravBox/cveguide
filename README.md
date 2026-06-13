@@ -1,9 +1,8 @@
-# How to run RICE-like events
+# Guide to __C__ommunity __V__idding __E__vents with Discord & Kollaborate.tv
 
 Hello. My name is Vars and this is my "manual" on how to run your own video event focused on peer feedback. It requires [Kollab](https://kollaborate.tv) and Discord.
 
 I've split the document into sections. You can see them on the left navbar.  
-If you are BentoVid staff, I also have a BentoVid RICE-specific guide locked behind an account login you should know.
 
 For the purposes of this document, we're assuming that your event is the following:
 
@@ -15,3 +14,6 @@ For the purposes of this document, we're assuming that your event is the followi
 - The entrants will be doing the commenting
 - There is a contest/awards component
 - The entrants will be voting/judging for those awards
+
+**If you would like to change anything about this guide, please open an issue on [Github](https://github.com/FravBox/cveguide)** or initiate a pull request.    
+If you don't have a github account, DM me on Discord `@standardquip`.

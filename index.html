@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" />
     <style>
       /* prevent sidebar TOC from collapsing */
-      .sidebar-nav ul { display: block !important; }
+      .sidebar-nav ul { 
+      display: block !important; 
+      }
 
       /* bold h1 items in sidebar TOC */
       .sidebar-nav a.is-h1 {
         font-weight: bold;
       }
-
+      
       .markdown-section strong {
         color: inherit;
         font-size: larger;
       }
-
       .markdown-section em {
         color: inherit;
       }
-
       .markdown-section code {
         color: inherit;
       }
@@ -65,6 +65,7 @@
     const _doneEach = window.$docsify.doneEach;
     window.$docsify.doneEach = function (hook, vm) {
       if (_doneEach) _doneEach(hook, vm);
+
       hook.doneEach(function () {
         document.querySelectorAll('.sidebar-nav ul').forEach(function (ul) {
           ul.setAttribute('open', '');
@@ -83,6 +84,47 @@
   });
 </script>
 
+<!-- __text__ renders as underlined -->
+<script>
+  window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook) {
+    hook.beforeEach(function(content) {
+      return content.replace(/__([^_]+)__/g, '<u>$1</u>');
+    });
+  });
+</script>
+
+<!-- force sidebar re-navigation when clicking current page's link -->
+<script>
+  window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook) {
+    let listenerAdded = false;
+
+    hook.doneEach(function() {
+      if (listenerAdded) return;
+      listenerAdded = true;
+
+      const sidebar = document.querySelector('.sidebar');
+      if (!sidebar) return;
+
+      sidebar.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href');
+        if (!href) return;
+
+        const targetHash = href.startsWith('#') ? href : '#' + href;
+
+        if (window.location.hash === targetHash) {
+          e.preventDefault();
+          // Silently wipe the hash (no hashchange fires) then set it again
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+          window.location.hash = targetHash;
+        }
+      });
+    });
+  });
+</script>
+
 <!-- load docsify -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
@@ -90,18 +132,9 @@
 <script>
   window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook) {
     hook.doneEach(function() {
-      document.querySelectorAll('.sidebar-nav .is-h1').forEach(function(el) {
-        el.classList.remove('is-h1');
-      });
-
-      const pagePath = window.location.hash.split('?')[0];
-
-      document.querySelectorAll('.markdown-section h1').forEach(function(h1) {
-        if (!h1.id) return;
-        const link = document.querySelector(
-          '.sidebar-nav a[href="' + pagePath + '?id=' + h1.id + '"]'
-        );
-        if (link) link.classList.add('is-h1');
+      document.querySelectorAll('.sidebar-nav a').forEach(function(a) {
+        var isH1 = !(a.getAttribute('href') || '').includes('?id=');
+        a.classList.toggle('is-h1', isH1);
       });
     });
   });

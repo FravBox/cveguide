@@ -1,6 +1,6 @@
 - Navigation
   - [Welcome](/README.md)
   - [Community considerations](community.md)
-  - [Tools & Subscriptions](/tools.md)
+  - [Tools & Subscriptions](tools.md)
   - [Technicals](tech.md)
-  - [Schedule & To Do Lists](schedule.md)
+  - [First Time Setup Checklist](first_time.md)

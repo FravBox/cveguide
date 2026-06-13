@@ -222,3 +222,32 @@ This can be an actual list in a channel, reference message, or on the website. I
 In a context where the accuracy of the answers matter, the official source of those answers should be distinguished in some way.
 
 Additionally, how do people report when things go wrong? Should they DM someone? Is there a `/report` command? Do your users know how to use it? This information should be conveyed to the event participants.
+
+## Marketing, outreach, & community culture
+
+This page assumes you're creating an event for a pre-existing discord server community.
+
+Before advertising outside your community to attract more participants, remember what your community is like, its disposition, and the definition of your event.
+
+Don't outreach to people or advertise in spaces that are too different from your current community and culture unless you are explicitly trying to change it.
+
+Inviting too many people of different dispositions from your current community can cause discomfort and alienate both the old and new participants.
+
+What this means in practice varies.    
+Let's assume your community primarily edits anime music videos.
+
+If you reach out to live-action music video editors and they participate in your event, they are a minority. The anime editors might not rate their videos as highly as the AMVs and thus not have a fair chance at winning any awards. They may be unblinded by simple process of elimination since no one in your community edits non-anime.
+
+The live-action editors may be dissuaded from returning in the future, and the anime editors who don't want to watch live-action videos may also leave.
+
+This can happen even without any intentional negativity.
+
+Also consider if your outreach is a bit too successful - and the live-action editors outnumber the anime ones. Now your original community may feel like they're being stamped out and you're changing the expectations of the event from underneath them.
+
+This is an over-simplified example. Most community culture clash will be far more minor, like editors with certain identifiable styles, extreme timezone variance(if they can't be online when everyone else is active, that's alienating), and communication differences.
+
+How to counter the feeling of alienation from outreach also varies.
+
+If you're intentionally trying to change the community, it's mostly a matter of pacing the changes over a longer time period and accepting some losses.
+
+During the transition period (which will likely be multiple events), you'll want to try make each group feel valued. In our example, you'll probably want to offer incentives for live-action videos, like a dedicated category, or change a video submission rule like you get to submit an extra video if it is live-action.

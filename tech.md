@@ -484,7 +484,89 @@ It makes fancy messages using discord webhooks. You can [find guides here.](http
 
 ## Using the website
 
-Website should be fairly intuitive but TODO cv2 messages.
+The website should be fairly intuitive, but to add fancier looking messages, you will need to make a "components-based message" (cv2) first.
 
-## Buttons that do things require the bot - TODO
+To do this, hit the "Add Message" button near the bottom of the page and select "Components-based Message" in the prompt.     
+This will create a Message 2.
 
+Then, near the top of the page on the right side of "message 1", select the trash icon. You now have only one cv2 message ready to customize for your needs. 
+
+**Thread**    
+If you wish to create a thread, use these fields. Otherwise, ignore them.
+
+**Profile**    
+If you want to change the name and profile picture of the app posting this message, use these. If left blank, the name and pfp you set for the webhook inside Discord will be used.
+
+**Files**     
+This can't be used until you add a component.
+
+### Components
+
+Select the "add" dropdown and then the component you would like to add.     
+The items will be added to your message in the order you add them. You may use the visual editor to preview and adjust them.
+
+**Container**    
+This is similar to the old embeds - it has a color bar on the side and contains text.    
+In the top right corner, it can have a button or a thumbnail, but not both.    
+It cannot contain anything else. If you want other components, you must put them outside the container.
+
+**Content**    
+Regular text.
+
+**Media Gallery**    
+Add 1 - 10 images or videos in your message.
+
+**File**    
+Attach a downloadable file to your message (it will not have a preview).
+
+**Separator**     
+Add a horizontal line to your message.
+
+**Row**    
+A row contains buttons and select menus.
+
+### Buttons and select menus
+
+To use anything other than a link button, you must have an account with discohook.app and have the bot in your server. Both of these things are 100% free.
+
+**Link button**    
+A button that links to a website.
+
+**Button**     
+A button that can perform actions through what Discohook calls "Flows." [Read about them here.](https://discohook.app/guide/getting-started/flows)    
+It has limited color customization.
+
+Some examples: add/remove roles, send new messages, create a thread, selete a message.
+
+**Select Menus**    
+A drop down menu. It can perform actions similar to buttons.    
+All select menus must be in their own row.
+
+Normal select menus have all custom text options. Here are other types of menus:    
+User select menu - this populates with all your server members and has auto-complete.    
+Role select menu - the same as above, but for roles.    
+User & Role select menu - combines both users & roles into one menu.    
+Channel select menu - lists all of your server channels as options.
+
+### Additional options
+
+The "options" dropdown at the end of the list of message components.
+
+**Flags**    
+If you want to make this message "silent". This will not give users a notification.
+
+**Allowed Mentions**    
+If you @mentioned anyone in your message, you can control which of those mentions will actually ping people.    
+Enable the control toggle and leave everything unchecked to ping no one. 
+
+### Posting or editing a message
+
+Once you have finished creating your message, you will want to send it.    
+Near the top of the page, tap "**Add Webhook**."
+
+You should have already created a webhook. Put the webhook URL here.     
+If you haven't created a webhook inside Discord yet, click the "Create Webhook" button. This will add the bot to your ser server and the bot will create the webhook for you.
+
+Once the webhook URL has been attached to the message, click either the **"send" button** to send a new message, or the arrow next to send where you may select "edit."
+
+If you're editing a message, you must then specify the message link. Follow the instructions in the prompt. Once the URL has been entered, select "Set Message Link" and then the "Edit" button to edit your message in Discord.
