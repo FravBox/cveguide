@@ -1,4 +1,4 @@
-# Guide to __C__ommunity __V__idding __E__vents with Discord & Kollaborate.tv
+# Guide to <u>C</u>ommunity <u>V</u>idding <u>E</u>vents with Discord & Kollaborate.tv
 
 Hello. My name is Vars and this is my "manual" on how to run your own video event focused on peer feedback. It requires [Kollab](https://kollaborate.tv) and Discord.
 

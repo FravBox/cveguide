@@ -7,6 +7,7 @@ It is heavily recommended you read [Community considerations](community.md) befo
 **Start at least a month before your event. Especially if you are using the Kollab webhook!**
 
 ## Discord
+
 Notice: It's impossible to mass delete messages that are over two weeks old. You will have to delete & recreate a channel or re-use the channel.
 
 Webhooks only work in a specific channel. If you delete a channel with a webhook, you must make a new webhook for the new channel.
