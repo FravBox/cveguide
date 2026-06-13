@@ -41,8 +41,7 @@ This checklist assumes the event channels will only be visible to a special even
 - [ ] Make upload folder (if collecting uploads through Kollab)
 - [ ] Make public videos folder
 - [ ] Correct workflows for project?    
-By default, Kollab will make a streaming version of all videos uploaded. You would turn this off (and assign any other automatic actions) in the workflow menu. [About workflows](https://www.kollaborate.tv/help/Workflows/File_Workflows).
-
+By default, Kollab will make a streaming version of all videos uploaded. You would turn this off (and assign any other automatic actions) in the workflow menu. [About workflows](https://www.kollaborate.tv/help/Workflows/File_Workflows).    
 - [ ] Create share links
   - [ ] Upload request
   - [ ] File link to public videos folder
@@ -75,12 +74,10 @@ By default, Kollab will make a streaming version of all videos uploaded. You wou
   - [ ] Tested different comment types on Kollab to make sure the webhooks work
 
 - [ ] **Discohook messages?**    
-Have you gotten familiar with how [Discohook](https://discohook.app) works? Did you want to use the bot? Have you come up with a unified way you want your messages to look? Did you need to set up any [button flows](https://discohook.app/guide/getting-started/flows)?
-
+Have you gotten familiar with how [Discohook](https://discohook.app) works? Did you want to use the bot? Have you come up with a unified way you want your messages to look? Did you need to set up any [button flows](https://discohook.app/guide/getting-started/flows)?     
 - [ ] **First channel messages?**     
 Did you make the first messages for each channel (and optionally pin them)?    
-E.g. welcome to the event, basic event info, important links, etc. You might want to format them nicely with discohook or other tools.
-
+E.g. welcome to the event, basic event info, important links, etc. You might want to format them nicely with discohook or other tools.     
 - [ ] **Event rules/info are posted somewhere?**    
 If it's not a separate webpage, google doc, or discord post, they might be in the submission form itself. What type of videos do you accept? How many are people allowed to submit? Etc.
 
@@ -150,12 +147,11 @@ If it's not a separate webpage, google doc, or discord post, they might be in th
 
 - [ ] End Kollab subscription or deactivate kollab webhook     
 If you plan to keep the Kollab subscription, the easiest way to turn the webhook off is to remove the discord webhook URLs from your PHP files.    
-Then you will not need a new secret key or have to mess with Kollab settings the next time you run your event.
-
+Then you will not need a new secret key or have to mess with Kollab settings the next time you run your event.     
 - [ ] Announce event finalists/winners publicly?
 - [ ] Order and/or ship prizes to winners?
 - [ ] Event channels: Re-create channels, delete messages, or otherwise prepare for next year?    
-If re-using the channels:
+If re-using the channels:     
   - [ ] Re-name threads so they have the year in the title (to differentiate them from future threads)
     - [ ] Lock & close the threads
   - [ ] Update or delete old pinned messages in preparation for the next event
