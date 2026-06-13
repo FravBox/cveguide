@@ -72,8 +72,8 @@ By default, Kollab will make a streaming version of all videos uploaded. You wou
   - [ ] Uploaded PHP files to server
   - [ ] Added URL to php files in Kollab
   - [ ] Tested different comment types on Kollab to make sure the webhooks work
-- [ ] **Discohook messages?** <br>Have you gotten familiar with how [Discohook](https://discohook.app) works? Did you want to use the bot? Have you come up with a unified way you want your messages to look? Did you need to set up any [button flows](https://discohook.app/guide/getting-started/flows)?
-- [ ] **First channel messages?** <br>Did you make the first messages for each channel (and optionally pin them)?<br>E.g. welcome to the event, basic event info, important links, etc. You might want to format them nicely with discohook or other tools.
+- [ ] **Discohook messages?** <br>Have you gotten familiar with how [Discohook](https://discohook.app) works? Did you want to use the bot? Have you come up with a unified way you want your messages to look? Did you need to set up any [button flows](https://discohook.app/guide/getting-started/flows)?<br>
+- [ ] **First channel messages?** <br>Did you make the first messages for each channel (and optionally pin them)?<br>E.g. welcome to the event, basic event info, important links, etc. You might want to format them nicely with discohook or other tools.<br>
 - [ ] **Event rules/info are posted somewhere?**<br>If it's not a separate webpage, google doc, or discord post, they might be in the submission form itself. What type of videos do you accept? How many are people allowed to submit? Etc.
 
 ## Pre-Event miscellaneous
